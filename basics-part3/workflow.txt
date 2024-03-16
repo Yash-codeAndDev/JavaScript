@@ -1,0 +1,74 @@
+JavaScript Execution Context
+
+Global Execution Context -> 
+    Automatically created when program is run
+    this in browser -> window object
+
+Functional Execution Context ->
+
+
+
+let val1 = 10
+let val2 = 5
+function addNum(num1,num2){
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1,val2)
+let result2 = addNum(10,2) 
+
+Phases:
+    1) Global Execution Context
+
+    2)Memory Creation Phase(cycle 1)
+        Memory allocation for variables and Function
+        No code is executed
+
+        variables are set to undefined
+            val1 = undefined
+            val2 = undefined
+        
+        functions are defined 
+            addNum() -> {....}
+
+        result1 = undefined
+        result2 = undefined
+
+    3)Execution Phase(cycle 2)
+
+        variable value is initialized
+        val1 = 10
+        val2 = 5
+
+      
+
+        result1 =addNum -> create its own new Execution Context
+
+                    Memory phase:
+                        num1 = undefined
+                        num2 = undefined
+                        total = undefined
+                
+                    Execution Context
+                        num1 = 10
+                        num2 = 5
+                        total = 15
+
+                After execution Execution Context is deleted for addNum
+    
+        result2 = addNum -> create its own new Execution Context
+
+                    Memory phase:
+                        num1 = undefined
+                        num2 = undefined
+                        total = undefined
+                
+                    Execution Context
+                        num1 = 10
+                        num2 = 2
+                        total = 12
+
+            After execution Execution Context is deleted for addNum
+
+
+Call Stack work on LIFO
