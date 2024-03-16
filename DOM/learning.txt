@@ -1,0 +1,30 @@
+difference between innerText, textContent and innerHTML
+
+innerHTML : display whole content in tag  with html content inside innerText
+textContent : display whole text context of tag
+innerText : display text what is visible to user
+
+eg : 
+<h1 id="title" class="heading">
+    DOM LEARNING 
+    <span style="display: none;">
+        test text
+    </span>
+</h1>
+
+const title = document.querySelector('#title')
+
+title.innerHTML : 
+
+<h1 id="title" class="heading">
+    DOM LEARNING 
+    <span style="display: none;">
+        test text
+    </span>
+</h1>
+
+title.textContent :
+DOM LEARNING test text
+
+title.innerText : 
+DOM LEARNING
