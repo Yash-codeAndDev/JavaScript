@@ -66,5 +66,3 @@ console.log(objfun(2,3))
 */
 
 
-
-
