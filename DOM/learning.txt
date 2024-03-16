@@ -28,3 +28,5 @@ DOM LEARNING test text
 
 title.innerText : 
 DOM LEARNING
+
+Creating DOM element :
