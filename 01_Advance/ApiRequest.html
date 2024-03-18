@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="userprofile" id="user-profile"></div>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            // console.log(this.responseText)
+
+            // JSON.parse(str) -> change string data to JSON 
+            let data = JSON.parse(this.responseText)
+            // console.log(data)
+            console.log(typeof data)
+            
+            const user = document.getElementById('user-profile')
+            const button = document.createElement('button')
+            button.id = 'profile-view'
+            button.innerHTML = "Click to view"
+
+            document.body.appendChild(button)
+            
+
+            button.addEventListener('click',function()
+            {
+                const card = document.createElement('div')
+                card.innerHTML = `
+                    <img src = "${data.avatar_url}"/>
+                    <p>Followers : ${data.followers}</p>
+                `
+                if(user.firstChild){
+                    user.remove(user.firstChild)
+                    user.append(card)
+                }
+                else{
+                    user.append(card)
+                }
+            })
+
+        }
+    }
+    console.log(xhr.readyState)
+    xhr.send()
+
+</script>
+</html>
