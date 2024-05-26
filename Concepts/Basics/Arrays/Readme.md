@@ -95,3 +95,18 @@
     console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
     console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
     ```
+
+* flat() 
+    - flat() creates a new flattened array from the original array.
+    - You can specify the depth to control how deep the flattening goes.
+    - It removes empty slots (undefined) from the array.
+    ```javascript    
+        let arr = [1, 2, [ 3, 4], 5, [6, , [ 7, 8], 9]]
+        console.log("Original Arr : ",arr)
+
+        let newArr = arr.flat()
+        console.log("Flattened Arr (default depth 1) : ",newArr) // [ 1, 2, 3, 4, 5, 6, [ 7, 8 ], 9 ]
+
+        newArr = arr.flat(Infinity)
+        console.log("Flattened Arr depth infinity : ",newArr) //  [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    ```

@@ -25,6 +25,7 @@ console.log(arr)
 
 /*
 
+//--------Concat() and SpreadOperator--------------------
 let arr = ["Yash",23,true]
 let dummy_arr = ["Iron Man","Hulk"]
 arr.push(dummy_arr)
@@ -44,7 +45,8 @@ console.log(arr)
 
 */
 
-
+/*
+//---------Splice() and Slice()--------------------
 let arr = [3 ,4,'A',['p','q',12],'C',10]
 console.log(arr.join()) // String -> 3,4,5,6,A,B,C
 
@@ -58,3 +60,14 @@ arr = [3 ,4,'A',['p','q',12],'C',10]
 let sliced_arr = arr.slice(1,4)
 console.log("Sliced Array : ",sliced_arr)
 console.log("Original Array : ",arr)
+
+*/
+
+let arr = [1, 2, [ 3, 4], 5, [6, , [ 7, 8], 9]]
+console.log("Original Arr : ",arr)
+
+let newArr = arr.flat()
+console.log("Flattened Arr (default depth 1) : ",newArr)
+
+newArr = arr.flat(Infinity)
+console.log("Flattened Arr depth infinity : ",newArr)
