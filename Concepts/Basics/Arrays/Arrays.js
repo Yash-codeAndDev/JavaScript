@@ -1,6 +1,7 @@
-
+/*
 let arr = [1,'A', 'B']
 console.log(arr.length)
+
 
 
 arr[6] = "Yash"
@@ -8,7 +9,7 @@ arr.forEach((item,index) => {
     console.log(`item : ${item} ,  index : ${index}`)
 })
 console.log(arr)
-
+*/
 /*
 
     let arr = ["Yash",23,true]
@@ -42,3 +43,18 @@ arr.push(...dummy_arr) // appending using spread operator
 console.log(arr)
 
 */
+
+
+let arr = [3 ,4,'A',['p','q',12],'C',10]
+console.log(arr.join()) // String -> 3,4,5,6,A,B,C
+
+arr = [3 ,4,'A',['p','q',12],'C',10]
+let spliced_arr = arr.splice(2,4)
+console.log("Spliced Array : ",spliced_arr)
+console.log("Original Array : ",arr)
+
+
+arr = [3 ,4,'A',['p','q',12],'C',10]
+let sliced_arr = arr.slice(1,4)
+console.log("Sliced Array : ",sliced_arr)
+console.log("Original Array : ",arr)

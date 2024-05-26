@@ -33,6 +33,33 @@
     
     console.log(arr)// [ 1, 'A', 'B', <3 empty items>, 'Yash' ]
 ```
+* Splice() VS Slice()
+    -   splice() modifies the original array by removing elements and returns an array containing the removed elements.
+    ```javascript
+        
+        /*
+            splice(startIndx, numberOfElements)
+        */
+        let arr = [3 ,4,'A',['p','q',12],'C',10]
+        let spliced_arr = arr.splice(2,4) 
+        console.log("Spliced Array : ",spliced_arr) //[ 'A', [ 'p', 'q', 12 ], 'C', 10 ]
+        console.log("Original Array : ",arr) // [ 3, 4 ]
+
+    ```
+
+
+    - slice() returns a shallow copy of a portion of the array into a new array without modifying the original array.
+    ```javascript
+
+        /*
+            slice(startIndx, endIndx)
+        */
+        let arr = [3 ,4,'A',['p','q',12],'C',10]
+        let sliced_arr = arr.slice(1,4)
+        console.log("Sliced Array : ",sliced_arr) // [ 4, 'A', [ 'p', 'q', 12 ] ]
+        console.log("Original Array : ",arr) // [ 3, 4, 'A', [ 'p', 'q', 12 ], 'C', 10 ]
+    ```
+
 * Concat() VS push()
 ```javascript
 
