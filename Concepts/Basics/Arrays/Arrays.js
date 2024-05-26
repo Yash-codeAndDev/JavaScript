@@ -1,3 +1,14 @@
+
+let arr = [1,'A', 'B']
+console.log(arr.length)
+
+
+arr[6] = "Yash"
+arr.forEach((item,index) => {
+    console.log(`item : ${item} ,  index : ${index}`)
+})
+console.log(arr)
+
 /*
 
     let arr = ["Yash",23,true]
@@ -10,6 +21,8 @@
 
     // both arr and dummy_arr points to same array
 */
+
+/*
 
 let arr = ["Yash",23,true]
 let dummy_arr = ["Iron Man","Hulk"]
@@ -28,26 +41,4 @@ dummy_arr = ["Iron Man","Hulk"]
 arr.push(...dummy_arr) // appending using spread operator
 console.log(arr)
 
-console.log("Concat Shalow Copy")
-arr = [1,2]
-dummy_arr = [4,5 ,[8,9]]
-final_arr = arr.concat(dummy_arr)
-console.log(final_arr)
-dummy_arr[2][1] = 10
-console.log(dummy_arr)
-console.log(final_arr)
-
-
-
-console.log("SpreadOpreator Shalow Copy")
-arr = [1,2]
-dummy_arr = [4,5,[8,9]]
-arr.push(...dummy_arr)
-console.log(final_arr)
-dummy_arr[2][1] = 10
-console.log(dummy_arr)
-console.log(final_arr)
-
-
-
-
+*/

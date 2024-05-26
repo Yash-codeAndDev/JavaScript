@@ -16,6 +16,23 @@
         both arr and dummy_arr points to same array
     */
 ```
+
+* Empty values in Arrays:
+```javascript        
+    let arr = [1,'A', 'B']
+    arr[6] = "Yash"
+    arr.forEach((item,index) => {
+        console.log(`item : ${item} ,  index : ${index}`)
+    })
+    /*
+        item : 1 ,  index : 0
+        item : A ,  index : 1
+        item : B ,  index : 2
+        item : Yash ,  index : 6
+    */
+    
+    console.log(arr)// [ 1, 'A', 'B', <3 empty items>, 'Yash' ]
+```
 * Concat() VS push()
 ```javascript
 
@@ -31,8 +48,8 @@
     console.log(final_array) // [ 'Yash', 23, true, 'Rohit', 'Iron Man', 'Hulk' ]
 
 ```
-* Concat and Spread Operator creates shallow copy
-
+* Concat() and Spread Operator creates shallow copy
+    
     ```javascript
     let arr = [1,2]
     let dummy_arr = [4,5, [8,9]]
@@ -43,11 +60,11 @@
     console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
     ```
     ```javascript
-        let arr = [1,2]
-        let dummy_arr = [4,5, [8,9]]
-        final_arr = arr.push(...dummy_arr) 
-        console.log(final_arr) //[ 1, 2, 4, 5, [ 8, 9 ] ]
-        dummy_arr[2][1] = 10
-        console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
-        console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
+    let arr = [1,2]
+    let dummy_arr = [4,5, [8,9]]
+    final_arr = arr.push(...dummy_arr) 
+    console.log(final_arr) //[ 1, 2, 4, 5, [ 8, 9 ] ]
+    dummy_arr[2][1] = 10
+    console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
+    console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
     ```
