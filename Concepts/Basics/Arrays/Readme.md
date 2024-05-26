@@ -43,20 +43,17 @@
     dummy_arr[2][1] = 10
     console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
     console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
-```
+
 </div>
 <div style="flex: 1;">
-    
-```javascript
-    let arr = [1,2]
+        let arr = [1,2]
     let dummy_arr = [4,5, [8,9]]
     final_arr = arr.push(...dummy_arr) 
     console.log(final_arr) //[ 1, 2, 4, 5, [ 8, 9 ] ]
     dummy_arr[2][1] = 10
     console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
     console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
-```
-</div>
-</div>
 
+</div>
+</div>
 ```
