@@ -28,13 +28,26 @@ dummy_arr = ["Iron Man","Hulk"]
 arr.push(...dummy_arr) // appending using spread operator
 console.log(arr)
 
-
-arr = [1,2,3]
-dummy_arr = [4,5,7, [8,9]]
+console.log("Concat Shalow Copy")
+arr = [1,2]
+dummy_arr = [4,5 ,[8,9]]
 final_arr = arr.concat(dummy_arr)
 console.log(final_arr)
-console.log(dummy_arr[3][1])
-dummy_arr[3][1] = 10
+dummy_arr[2][1] = 10
 console.log(dummy_arr)
 console.log(final_arr)
+
+
+
+console.log("SpreadOpreator Shalow Copy")
+arr = [1,2]
+dummy_arr = [4,5,[8,9]]
+arr.push(...dummy_arr)
+console.log(final_arr)
+dummy_arr[2][1] = 10
+console.log(dummy_arr)
+console.log(final_arr)
+
+
+
 

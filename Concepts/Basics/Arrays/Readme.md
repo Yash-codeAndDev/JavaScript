@@ -3,8 +3,6 @@
 * JavaScript Array Properties :
     - JavaScript arrays are resizable and can contain a mix of different data types.
     - JavaScript arrays are zero-indexed
-    - JavaScript array-copy operations create shallow copies
-
 ```javascript
 
     const arr = ["Yash","Ayush",23,21,true]
@@ -31,5 +29,34 @@
     dummy_arr = ["Iron Man","Hulk"]
     final_array = arr.concat(dummy_arr) // concat() return new array
     console.log(final_array) // [ 'Yash', 23, true, 'Rohit', 'Iron Man', 'Hulk' ]
+
+```
+* Concat and Spread Operator creates shallow copy
+<div style="display: flex; gap: 10px;">
+    <div style="flex: 1;">
+
+```javascript
+    let arr = [1,2]
+    let dummy_arr = [4,5, [8,9]]
+    final_arr = arr.concat(dummy_arr) 
+    console.log(final_arr) //[ 1, 2, 4, 5, [ 8, 9 ] ]
+    dummy_arr[2][1] = 10
+    console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
+    console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
+```
+</div>
+<div style="flex: 1;">
+    
+```javascript
+    let arr = [1,2]
+    let dummy_arr = [4,5, [8,9]]
+    final_arr = arr.push(...dummy_arr) 
+    console.log(final_arr) //[ 1, 2, 4, 5, [ 8, 9 ] ]
+    dummy_arr[2][1] = 10
+    console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
+    console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
+```
+</div>
+</div>
 
 ```
