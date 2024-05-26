@@ -35,7 +35,7 @@
 <div style="display: flex; gap: 10px;">
     <div style="flex: 1;">
 
-```javascript
+    ```javascript
     let arr = [1,2]
     let dummy_arr = [4,5, [8,9]]
     final_arr = arr.concat(dummy_arr) 
@@ -43,9 +43,11 @@
     dummy_arr[2][1] = 10
     console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
     console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
-
+    ```
     </div>
     <div style="flex: 1;">
+    
+    ```javascript
         let arr = [1,2]
         let dummy_arr = [4,5, [8,9]]
         final_arr = arr.push(...dummy_arr) 
@@ -53,7 +55,7 @@
         dummy_arr[2][1] = 10
         console.log(dummy_arr) // [ 4, 5, [ 8, 10 ] ]
         console.log(final_arr) // [ 1, 2, 4, 5, [ 8, 10 ] ]
-
+    ```
     </div>
 </div>
 ```
